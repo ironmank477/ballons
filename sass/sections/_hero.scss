@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  padding-top: 17rem;
+  height: 74.5rem;
+  background: linear-gradient(
+      90.05deg,
+      rgba(186, 133, 84, 0.7) 0.03%,
+      rgba(1, 1, 1, 0.7) 99.94%
+    ),
+    url('../img/header-background.jpg') center / cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 97rem;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    animation-name: leftToRight;
+    animation-duration: 1.7s; // продолжительность анимации
+    animation-delay: 1s; // задержка анимации
+    animation-timing-function: ease; // поведение анимации
+    backface-visibility: hidden; // во избежании дергания, просвечивании анимации(задний контур)
+  }
+
+  &__description {
+    font-size: 4rem;
+    font-weight: 200;
+    color: #fff;
+    letter-spacing: 0.5rem;
+    margin-bottom: 5rem;
+    animation-name: rightToLeft;
+    animation-duration: 1.7s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    backface-visibility: hidden; // во избежании просвечивании анимации(задний контур)
+  }
+}
